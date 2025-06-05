@@ -1,0 +1,144 @@
+
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-color: #B8CFCE;
+}
+
+.head-section{
+    background-image: url('background.jpg');
+    opacity: 0.7;
+    background-size : cover;
+    background-position: center;
+    background-attachment: fixed;
+    color:white;
+    text-align: center;
+    padding: 100px 60px;
+    position:relative;
+    z-index:1;
+
+}
+
+.text {
+    background-color: #333446;
+    color:white;
+    width: 500px;
+    padding: 30px;
+    margin: auto;
+    border-radius: 10px;
+    
+}
+
+.text h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+}
+
+.text p{
+    font-size: 20px;
+}
+
+.service-menu{
+    display:flex;
+    flex-direction:row;
+    background-color:#EAEFEF;
+    color: black;
+    justify-content: space-around;
+    padding: 20px;
+    margin: -70px 250px;
+    border-radius: 10px;
+    border-width:10px;
+    z-index:2;
+    position:relative;
+}
+
+.service-item {
+    background-color:#EAEFEF;
+    text-align:center;
+    text-decoration:none;
+    font-weight:bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color:black;
+    font-size:20px;
+    border-radius: 10px;
+}
+
+.service-item:hover, .service-item:active{
+    background-color: #FFD66B;
+}
+
+.booking-sec {
+    background-color: #333446;
+    padding: 50px;
+    padding-top:100px;
+    border-radius: 20px;
+    color:#EAEFEF;
+    text-align: center;
+    z-index:1;
+    position:relative;
+    margin: -50px 100px ;
+
+}
+
+.trip-type{
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    width: 400px;
+}
+
+.input-grid{
+    display:flex;
+    justify-content:space-around;
+    flex-direction: row;
+}
+
+.input-box{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.input-box label{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-box input,
+.input-box select {
+    padding: 15px;
+    border: 1px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom:40px;
+}
+
+.button-container{
+    text-align:centre;
+}
+
+.search-btn {
+    padding: 10px;
+    width: auto;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+    align-items: center;
+    text-align:centre;
+
+}
+
+.search-btn:active,
+.search-btn:hover {
+    background-color: #FFD66B;
+}
+
+
