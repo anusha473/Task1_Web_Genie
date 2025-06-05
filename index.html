@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Traveller's Guide</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="head-section">
+            <div class="text">
+                <h1>Plan Your Trip Now !!</h1>
+                <p>Select a service to begin</p>
+            </div>
+
+        </div>
+
+        <div class="service-menu">
+            <div class="service-item" onclick="showSection('flights')"><i class="fas fa-plane fa-2x"></i><span>Flights</span></div>
+            <div class="service-item" onclick="showSection('trains')"><i class="fas fa-train fa-2x"></i><span>Trains</span></div>
+            <div class ="service-item" onclick="showSection('buses')"><i class="fas fa-bus fa-2x"></i><span>Buses</span></div>
+            <div class="service-item" onclick="showSection('hotels')"><i class="fas fa-hotel fa-2x"></i><span>Hotels</span></div>
+            <div class="service-item" onclick="showSection('cabs')"><i class="fas fa-car fa-2x"></i><span>Cabs</span></div>
+            <div class="service-item" onclick="showSection('restaurants')"><i class="fas fa-utensils fa-2x"></i><span>Restaurants</span></div>
+        </div>
+
+        <!--FLIGHT BOOKING SECTION-->
+        <div id="flights" class="booking-sec" style="display: none;">
+
+            <!--asking for date-->
+            <div class="trip-type">
+                <label><input type="radio" name="trip" checked> One Way</label>
+                <label><input type="radio" name="trip" > Round Trip</label>
+                <label><input type="radio" name="trip"> Multi City</label>
+            </div>
+
+            <!--input boxes for row-->
+            <div class="input-grid">
+                <div class="input-box">
+                    <label>From</label>
+                    <input type="text" placeholder="Enter city">
+                </div>
+                <div class="input-box">
+                    <label>To</label>
+                    <input type="text" placeholder="Enter city">
+                </div>
+                <div class="input-box">
+                    <label>Departure Date</label>
+                    <input type="date">
+                </div>
+                <div class="input-box">
+                    <label>Class</label>
+                    <select>
+                        <option>Economy</option>
+                        <option>Business</option>
+                        <option>Premium Economy</option>
+                        <option>First Class</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label>Travellers</label>
+                    <input type="number" > 
+                </div>
+            </div>
+
+            <!--Book Button-->
+            <div class="button-container">
+                <button class="search-btn" onclick="console.log('Fligh booked!')">Search Flights</button>
+            </div>
+
+
+        </div>
+
+
+        <!--HOTELS BOOKING SECTION-->
+        <div id="hotels" class="booking-sec" style = "display: none;">
+            <div class="input-grid">
+                <div class="input-box">
+                    <label> Location</label>
+                    <input type="text" placeholder="Enter location">
+                </div>
+                <div class="input-box">
+                    <label> Check-In</label>
+                    <input type="date">
+                </div>
+                <div class="input-box">
+                    <label> Check-Out</label>
+                    <input type="date">
+                </div>
+                <div class="input-box">
+                    <label> Rooms</label>
+                    <input type="number">
+                </div>
+                <div class="input-box">
+                    <label> Travellers</label>
+                    <input type="number">
+                </div>
+            </div>
+            <!--Book Button-->
+            <div class="button-container">
+                <button class="search-btn" onclick="console.log('Fligh booked!')">Search Hotels</button>
+            </div>
+
+        </div>
+
+        <div id="buses" class="booking-sec" style="display:none;">
+            <div class="input-grid">
+                <div class="input-box">
+                    <label> From</label>
+                    <input type="text" placeholder="Enter City">
+                </div>
+                <div class="input-box">
+                    <label> To </label>
+                    <input type="text" placeholder="Enter City">
+                </div>
+                <div class="input-box">
+                    <label>Travellers</label>
+                    <input type="number">
+                </div>
+                <div class="input-box">
+                    <label>Travel Date</label>
+                    <input type="date">
+                </div>
+            </div>
+            <!--Book Button-->
+            <div class="button-container">
+                <button class="search-btn" onclick="console.log('Fligh booked!')">Search Buses</button>
+            </div>
+        </div>
+
+        <div id="cabs" class="booking-sec" style="display: none;">
+            <div class="trip-type">
+                <label><input type="radio" name="trip" checked> One-Way</label>
+                <label><input type="radio" name="trip" > Round-Trip</label>
+                <label><input type="radio" name="trip"> Airport Transfers</label>
+                <label><input type="radio" name="trip"> Hourly Rentals</label>
+            </div>
+            <div class="input-grid">
+                <div class="input-box">
+                    <label> From</label>
+                    <input type="text" placeholder="Enter City">
+                </div>
+                <div class="input-box">
+                    <label> To</label>
+                    <input type="text" placeholder="Enter City">
+                </div>
+                <div class="input-box">
+                    <label> Pickup-Time</label>
+                    <input type="datetime-local">
+                </div>
+            </div>
+            <!--Book Button-->
+            <div class="button-container">
+                <button class="search-btn" onclick="console.log('Fligh booked!')">Search Cabs</button>
+            </div>
+        </div>
+        <div id="restaurants" class="booking-sec" style="display: none;">
+            <div class="trip-type">
+                <label><input type="radio" name="trip" checked> Veg</label>
+                <label><input type="radio" name="trip" > Non-Veg</label>
+            </div>
+            <div class="input-grid">
+                <div class="input-box">
+                    <label> Name of Restaurant</label>
+                    <input type="text" placeholder="name of the restaurant">
+                </div>
+                <div class="input-box">
+                    <label> Guests</label>
+                    <input type="number">
+                </div>
+                <div class="input-box">
+                    <label> Date and Time</label>
+                    <input type="datetime-local">
+                </div>
+            </div>
+            <!--Book Button-->
+            <div class="button-container">
+                <button class="search-btn" onclick="console.log('Fligh booked!')">Search Restaurants</button>
+            </div>
+        </div>
+        <div id="trains" class="booking-sec" style="display:none;">
+            <div class="input-grid">
+                <div class="input-box">
+                    <label>From</label>
+                    <input type="text" placeholder="Enter City">
+                </div>
+                <div class="input-box">
+                    <label>To</label>
+                    <input type="text" placeholder="Enter City">
+                </div>
+                <div class="input-box">
+                    <label>Travel Date</label>
+                    <input type="date">
+                </div>
+                <div class="input-box">
+                    <label>Class</label>
+                    <select>
+                        <option>All Class</option>
+                        <option>Sleeper Class</option>
+                        <option>3rd AC</option>
+                        <option>2nd AC</option>
+                        <option>1st AC</option>
+                    </select>
+                </div>
+            </div>
+            <!--Book Button-->
+            <div class="button-container">
+                <button class="search-btn" onclick="console.log('Fligh booked!')">Search Trains</button>
+            </div>
+        </div>
+
+        <script>
+            function showSection(id) {
+                let boxes = document.querySelectorAll('.booking-sec');
+                for( let i =0; i< boxes.length;i++){
+                    boxes[i].style.display = 'none';
+                }
+                let service = document.getElementById(id);
+                service.style.display = 'block';
+            }
+        </script>
+
+    </body>
+</html>
